@@ -6,3 +6,4 @@
 
 - link:
     ~/.reviewboardrc: dotfiles/.reviewboardrc
+    ~/.tmux.conf: dotfiles/.tmux.conf
