@@ -15,3 +15,4 @@
     ~/.dircolors: .dircolors
     ~/.reviewboardrc: .reviewboardrc
     ~/.tmux.conf: .tmux.conf
+    ~/bin/git-reset-here: bin/git-reset-here

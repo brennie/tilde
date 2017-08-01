@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -euf -o pipefail
+
+ARGC=$#
+
+if [[ ${ARGC} -lt 1 ]]; then
+	echo "Usage: git reset-here [options] <branch-name>"
+	exit 1
+fi
+
+DEST_BRANCH=${@: -1}
+
+if ! (git show-ref --quiet --verify "refs/heads/${DEST_BRANCH}"); then
+	echo "No such branch: ${DEST_BRANCH}"
+	exit 1
+fi
+
+HEAD=$(git rev-parse HEAD)
+ARGC=$((${#} - 1))
+ARGS=${@:1:$ARGC}
+
+git checkout -q "${DEST_BRANCH}"
+git reset ${ARGS} "${HEAD}"
