@@ -1,0 +1,22 @@
+LAND_SQUASH = True  # Always squash instead of creating merge commits.
+MARKDOWN = True  # Post with markdown support.
+
+QUIET = True  # `rbt shell` doesn't print info before starting shell.
+SHELL = 'ipython'  # Use ipython when available.
+
+ALIASES = {
+    # Delete all `.pyc` files under the current directory.
+    'clear-pycs': "!find . -iname '*.pyc' -delete",
+
+    # Post to the server on localhost:8080 instead of the one specified in
+    # .reviewboardrc.
+    'localpost': 'post --server=http://localhost:8080',
+
+    # Post the tip commit for review.
+    'post-this': 'post $* HEAD^..HEAD',
+
+    # Run flake8 on the diff, ignoring some errors.
+    'flake8': '!rbt diff $* | flake8 --diff --ignore=E121,E125,E129,D100,D203,D400',
+}
+
+# vim: syntax=python
