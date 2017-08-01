@@ -5,5 +5,13 @@
 - clean: ['~']
 
 - link:
+    ~/.config/fish/conf.d/00-colours.fish: .config/fish/conf.d/00-colours.fish
+    ~/.config/fish/conf.d/00-path-macos.fish: .config/fish/conf.d/00-path-macos.fish
+    ~/.config/fish/conf.d/00-path.fish: .config/fish/conf.d/00-path.fish
+    ~/.config/fish/conf.d/00-perl-local-lib.fish: .config/fish/conf.d/00-perl-local-lib.fish
+    ~/.config/fish/conf.d/10-dircolors.fish: .config/fish/conf.d/10-dircolors.fish
+    ~/.config/fish/conf.d/10-ssh-agent-linux.fish: .config/fish/conf.d/10-ssh-agent-linux.fish
+    ~/.config/fish/conf.d/99-once.fish: .config/fish/conf.d/99-once.fish
+    ~/.dircolors: .dircolors
     ~/.reviewboardrc: .reviewboardrc
     ~/.tmux.conf: .tmux.conf
