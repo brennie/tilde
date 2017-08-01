@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'groenewege/vim-less', { 'for': 'less' }
   Plug 'honza/dockerfile.vim'
+  Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
   if s:darwin
     Plug '/usr/local/opt/fzf'
   endif
