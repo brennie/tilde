@@ -5,5 +5,5 @@
 - clean: ['~']
 
 - link:
-    ~/.reviewboardrc: dotfiles/.reviewboardrc
-    ~/.tmux.conf: dotfiles/.tmux.conf
+    ~/.reviewboardrc: .reviewboardrc
+    ~/.tmux.conf: .tmux.conf
