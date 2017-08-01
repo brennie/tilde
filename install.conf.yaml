@@ -20,10 +20,13 @@
     ~/.config/fish/functions/fish_prompt.fish: .config/fish/functions/fish_prompt.fish
     ~/.config/fish/functions/fish_title.fish: .config/fish/functions/fish_title.fish
     ~/.config/fish/functions/fish_user_key_bindings.fish: .config/fish/functions/fish_user_key_bindings.fish
+    ~/.config/nvim/init.vim: .config/nvim/init.vim
+    ~/.config/nvim/plugins.vim: .config/nvim/plugins.vim
     ~/.dircolors: .dircolors
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: .gitignore_global
     ~/.hgrc: .hgrc
+    ~/.local/share/nvim/site/autoload/plug.vim: .local/share/nvim/site/autoload/plug.vim
     ~/.reviewboardrc: .reviewboardrc
     ~/.tmux.conf: .tmux.conf
     ~/bin/git-reset-here: bin/git-reset-here
