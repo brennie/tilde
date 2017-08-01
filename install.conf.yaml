@@ -15,6 +15,7 @@
     ~/.dircolors: .dircolors
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: .gitignore_global
+    ~/.hgrc: .hgrc
     ~/.reviewboardrc: .reviewboardrc
     ~/.tmux.conf: .tmux.conf
     ~/bin/git-reset-here: bin/git-reset-here
