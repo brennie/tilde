@@ -1,3 +1,5 @@
+source /usr/share/fish/completions/git.fish
+
 complete -c git -n '__fish_git_needs_command' -f -a 'rebase-here' -d 'Rebase a branch here'
 complete -c git -n '__fish_git_using_command rebase-here' -f -a '(__fish_git_branches)' -d 'git branch'
 
