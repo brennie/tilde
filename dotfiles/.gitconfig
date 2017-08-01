@@ -1,0 +1,33 @@
+[user]
+	name = Barret Rennie
+	email = barret@brennie.ca
+	signingkey = DC46F748BD89DD16CED488354D71D86C09132D72
+[diff]
+	compactionHeuristic = true
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[grep]
+	lineNumber = 1
+[alias]
+	fixup = commit --amend -C HEAD
+	tip = log -1 HEAD
+	glog = log --graph --decorate --oneline
+	rebase-this = "!git rebase --onto $1 HEAD^ #"
+	rebase-here = "!git rebase HEAD $1 #"
+	wip = "!git add .; git commit -m WIP"
+	unwip = "![[ $(git log -1 --format=%B) == WIP ]] && git reset --soft HEAD^ && git status || echo HEAD is not a WIP commit"
+	reset-all = reset HEAD .
+	reset-head = reset --soft HEAD^
+	mirror-push = push --prune mirror +refs/remotes/origin/*:refs/remotes/origin/* +refs/heads/dev/*:refs/heads/dev/* +refs/tags/*:refs/tags/*
+	mirror-fetch = fetch --prune mirror +refs/remotes/origin/*:refs/remotes/origin/* +refs/heads/dev/*:refs/heads/dev/* +refs/tags/*:refs/tags/*
+[sendemail]
+	smtpUser = barret
+	smtpServer = brennie.ca
+	smtpServerPort = 587
+	smtpEncryption = tls
+[pull]
+	rebase = True
+[rerere]
+	enabled = true

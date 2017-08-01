@@ -13,6 +13,8 @@
     ~/.config/fish/conf.d/10-ssh-agent-linux.fish: .config/fish/conf.d/10-ssh-agent-linux.fish
     ~/.config/fish/conf.d/99-once.fish: .config/fish/conf.d/99-once.fish
     ~/.dircolors: .dircolors
+    ~/.gitconfig: .gitconfig
+    ~/.gitignore_global: .gitignore_global
     ~/.reviewboardrc: .reviewboardrc
     ~/.tmux.conf: .tmux.conf
     ~/bin/git-reset-here: bin/git-reset-here

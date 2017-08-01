@@ -1,0 +1,18 @@
+# vim backup files
+*~
+
+# vim swap files
+.*swp
+
+# macOS directory information
+.DS_Store
+
+# Windows thumbs information
+thumbs.db
+
+# IntelliJ project files
+.idea
+
+# Sublime project files
+*.sublime-project
+*.sublime-workspace
