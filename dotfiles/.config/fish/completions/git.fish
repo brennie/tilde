@@ -1,4 +1,8 @@
-source /usr/share/fish/completions/git.fish
+if test (uname) = 'Darwin'
+    source /usr/local/opt/fish/share/fish/completions/git.fish
+else
+    source /usr/share/fish/completions/git.fish
+end
 
 complete -c git -n '__fish_git_needs_command' -f -a 'rebase-here' -d 'Rebase a branch here'
 complete -c git -n '__fish_git_using_command rebase-here' -f -a '(__fish_git_branches)' -d 'git branch'
