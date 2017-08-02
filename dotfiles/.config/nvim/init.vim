@@ -8,6 +8,7 @@ syntax on
 set termguicolors
 set bg=dark
 colorscheme NeoSolarized
+highlight colorcolumn guibg=#dc322f
 
 let mapleader=","
 
