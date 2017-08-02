@@ -2,12 +2,12 @@ let s:darwin = has('mac')
 
 call plug#begin('~/.config/nvim/plugins/')
   Plug 'AndrewRadev/splitjoin.vim'
-  Plug 'altercation/vim-colors-solarized'
   Plug 'dag/vim-fish', { 'for': 'fish' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'groenewege/vim-less', { 'for': 'less' }
   Plug 'honza/dockerfile.vim'
   Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }
+  Plug 'iCyMind/Neosolarized'
   if s:darwin
     Plug '/usr/local/opt/fzf'
   endif

@@ -5,16 +5,16 @@ source ~/.config/nvim/plugins.vim
 filetype plugin indent on
 syntax on
 
-let g:solarized_contrast = "high"
+set termguicolors
 set bg=dark
-colorscheme solarized
+colorscheme NeoSolarized
 
 let mapleader=","
 
 set laststatus=2  " Always show airline.
 
 " Allow backspacing over autoindents, end of lines, and start of input.
-set backspace=indent,eol,start  
+set backspace=indent,eol,start
 
 set modeline     " Enable modelines.
 set modelines=5  " Search 5 lines for a modeline.
