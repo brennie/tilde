@@ -9,6 +9,7 @@
     ~/.config/fish/completions/pew.fish: .config/fish/completions/pew.fish
     ~/.config/fish/completions/rbt.fish: .config/fish/completions/rbt.fish
     ~/.config/fish/completions/tig.fish: .config/fish/completions/tig.fish
+    ~/.config/fish/config.fish: .config/fish/config.fish
     ~/.config/fish/conf.d/00-colours.fish: .config/fish/conf.d/00-colours.fish
     ~/.config/fish/conf.d/00-path-macos.fish: .config/fish/conf.d/00-path-macos.fish
     ~/.config/fish/conf.d/00-path.fish: .config/fish/conf.d/00-path.fish
