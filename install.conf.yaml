@@ -30,5 +30,6 @@
     ~/.hgrc: .hgrc
     ~/.local/share/nvim/site/autoload/plug.vim: .local/share/nvim/site/autoload/plug.vim
     ~/.reviewboardrc: .reviewboardrc
+    ~/.tigrc: .tigrc
     ~/.tmux.conf: .tmux.conf
     ~/bin/git-reset-here: bin/git-reset-here

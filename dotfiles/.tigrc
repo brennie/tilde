@@ -1,0 +1,2 @@
+set main-view = line-number:no,interval=5 id:no date:default author:full commit-title:yes,graph=v1,refs,overflow=no
+set diff-options = --show-signature
