@@ -62,3 +62,6 @@ nnoremap <silent> <C-j> :<C-u>silent call append(line('.'), repeat([''], v:count
 
 " Map [COUNT]<C-k> to insert COUNT blank lines above.
 nnoremap <silent> <C-k> :<C-u>silent call append(line('.')-1, repeat([''], v:count1))<CR>
+
+" Map <C-p> to open fzf
+nnoremap <C-p> :Files<CR>
