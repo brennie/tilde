@@ -1,5 +1,9 @@
 let s:darwin = has('mac')
 
+if !s:darwin
+  source /usr/share/vim/vimfiles/plugin/fzf.vim
+end
+
 source ~/.config/nvim/plugins.vim
 
 filetype plugin indent on
