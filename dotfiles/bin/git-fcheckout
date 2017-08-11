@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# Use fzf to browse branches.
+
+set -uo pipefail
+IFT=$'\n'
+
+branches=$(git for-each-ref --format="%(refname:short)" refs/heads)
+
+if [[ $# -gt 1 ]]; then
+    echo "usage: git fcheckout [PATTERN]" >&2
+    exit 1
+elif [[ $# -eq 1 ]]; then
+    branches=$(echo "${branches}" | rg -- $1)
+fi
+
+branch=$(echo "${branches}" | fzf)
+
+if [[ $? -eq 0 ]]; then
+    git checkout "${branch}"
+fi

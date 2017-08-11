@@ -33,3 +33,4 @@
     ~/.tigrc: .tigrc
     ~/.tmux.conf: .tmux.conf
     ~/bin/git-reset-here: bin/git-reset-here
+    ~/bin/git-fcheckout: bin/git-fcheckout
