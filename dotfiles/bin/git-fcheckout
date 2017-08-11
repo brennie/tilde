@@ -14,7 +14,7 @@ elif [[ $# -eq 1 ]]; then
     branches=$(echo "${branches}" | rg -- $1)
 fi
 
-branch=$(echo "${branches}" | fzf)
+branch=$(echo "${branches}" | fzf --preview="git glog --color=always {}")
 
 if [[ $? -eq 0 ]]; then
     git checkout "${branch}"
