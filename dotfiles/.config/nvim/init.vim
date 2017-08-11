@@ -44,6 +44,11 @@ augroup Python
   autocmd FileType python call matchadd('ColorColumn', '\%>79v.\+', 100)
 augroup END
 
+augroup JavaScript
+  autocmd!
+  autocmd! FileType javascript call matchadd('ColorColumn', '\%>80v.\+', 100)
+augroup END
+
 augroup Git
   autocmd!
   autocmd FileType gitcommit call matchadd('ColorColumn', '\%>72v.\+', 100)
