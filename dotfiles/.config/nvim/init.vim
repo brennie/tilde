@@ -28,8 +28,6 @@ set ruler        " Show position in file and line.
 set scrolloff=10 " Show atleast 10 lines above & below cursor if possible.
 set wildmenu     " Visual autocomplete for commands.
 
-set shell=/bin/bash  " Replace fish with bash for shell commands.
-
 set nobackup        " No automatic backups.
 set fileformat=unix " Force \n line endings.
 set hidden          " Allow switching from hidden buffers.
@@ -70,3 +68,15 @@ nnoremap <silent> <C-k> :<C-u>silent call append(line('.')-1, repeat([''], v:cou
 
 " Map <C-p> to fzf.vim file search.
 nnoremap <C-p> :Files<CR>
+
+" Use <A-{hjkl}> to move around windows.
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+
+" The same for terminal mode.
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
