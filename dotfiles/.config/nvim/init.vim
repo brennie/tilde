@@ -52,6 +52,11 @@ augroup Git
   autocmd FileType gitcommit call matchadd('ColorColumn', '\%>72v.\+', 100)
 augroup END
 
+augroup PostCSS
+  autocmd!
+  autocmd BufNewFile,BufRead *.pcss set ft=scss
+augroup END
+
 if s:darwin
   " Keybindings to make nvim play nice on macOS.
   nnoremap <C-a> <Home>

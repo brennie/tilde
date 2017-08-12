@@ -1,6 +1,7 @@
 let s:darwin = has('mac')
 
 call plug#begin('~/.config/nvim/plugins/')
+  Plug 'alexlafroscia/postcss-syntax.vim', { 'for': 'scss' }
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'dag/vim-fish', { 'for': 'fish' }
   Plug 'elzr/vim-json', { 'for': 'json' }
