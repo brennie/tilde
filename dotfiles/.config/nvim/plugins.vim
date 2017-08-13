@@ -17,6 +17,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'rust-lang/rust.vim'
+  Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-surround'
