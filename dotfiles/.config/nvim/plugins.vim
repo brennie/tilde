@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/plugins/')
     Plug '/usr/local/opt/fzf'
   endif
   Plug 'junegunn/fzf.vim'
+  Plug 'mhinz/vim-signify'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'rust-lang/rust.vim'
