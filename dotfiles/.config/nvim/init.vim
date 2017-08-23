@@ -1,5 +1,6 @@
 let s:darwin = has('mac')
 
+
 if !s:darwin
   source /usr/share/vim/vimfiles/plugin/fzf.vim
 end
@@ -31,6 +32,8 @@ set wildmenu     " Visual autocomplete for commands.
 set nobackup        " No automatic backups.
 set fileformat=unix " Force \n line endings.
 set hidden          " Allow switching from hidden buffers.
+
+let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
 
 augroup lint
   autocmd!
