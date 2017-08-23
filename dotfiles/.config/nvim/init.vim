@@ -33,6 +33,8 @@ set nobackup        " No automatic backups.
 set fileformat=unix " Force \n line endings.
 set hidden          " Allow switching from hidden buffers.
 
+set mouse +=a " Enable mouse support.
+
 let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
 
 augroup lint
