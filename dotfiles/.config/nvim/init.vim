@@ -91,3 +91,6 @@ tnoremap <A-l> <C-\><C-n><C-w>l
 
 " Use <C-k>b to open/close NERDtree
 nnoremap <silent> <C-k>b :NERDTreeToggle<CR>
+
+" Use <leader>x to close buffers
+nnoremap <silent> <leader>x :BW<cr>
