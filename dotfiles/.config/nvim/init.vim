@@ -37,6 +37,8 @@ set mouse +=a " Enable mouse support.
 
 let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
 
+let g:python3_host_prog = expand('~/.virtualenvs/neovim3/bin/python')
+
 augroup lint
   autocmd!
   autocmd BufWritePre * StripWhitespace
