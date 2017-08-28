@@ -2,6 +2,7 @@ let s:darwin = has('mac')
 
 call plug#begin('~/.config/nvim/plugins/')
   Plug 'alexlafroscia/postcss-syntax.vim', { 'for': 'scss' }
+  Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'dag/vim-fish', { 'for': 'fish' }
   Plug 'elzr/vim-json', { 'for': 'json' }
@@ -18,6 +19,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'qpkorr/vim-bufkill'
   Plug 'rust-lang/rust.vim'
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-sleuth'

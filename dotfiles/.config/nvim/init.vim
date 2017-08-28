@@ -38,6 +38,12 @@ set mouse +=a " Enable mouse support.
 let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
 
 let g:python3_host_prog = expand('~/.virtualenvs/neovim3/bin/python')
+let g:deoplete#enable_at_startup = 1
+let g:LanguageClient_serverCommands= {
+ \ 'python': [expand('~/.virtualenvs/neovim3/bin/pyls'),]
+ \ }
+let g:LanguageClient_autoStart = 1
+let g:LanguageClient_trace = 'verbose'
 
 augroup lint
   autocmd!
@@ -98,3 +104,8 @@ nnoremap <silent> <C-k>b :NERDTreeToggle<CR>
 
 " Use <leader>x to close buffers
 nnoremap <silent> <leader>x :BW<cr>
+
+" Map gd to go to defintion.
+nnoremap gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <F2> :call LanguageClient_textDocument_rename()<CR>
+nnoremap <C-f> :call LanguageClient_textDocument_formatting()<CR>
