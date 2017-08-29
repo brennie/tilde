@@ -33,6 +33,8 @@ set nobackup        " No automatic backups.
 set fileformat=unix " Force \n line endings.
 set hidden          " Allow switching from hidden buffers.
 
+set foldlevelstart=99 " Do not automatically close folds.
+
 set mouse +=a " Enable mouse support.
 
 let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
@@ -44,6 +46,8 @@ let g:LanguageClient_serverCommands= {
  \ }
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_trace = 'verbose'
+
+let g:SimpylFold_docstring_preview = 1
 
 augroup lint
   autocmd!

@@ -14,6 +14,7 @@ call plug#begin('~/.config/nvim/plugins/')
     Plug '/usr/local/opt/fzf'
   endif
   Plug 'junegunn/fzf.vim'
+  Plug 'Konfekt/FastFold'
   Plug 'mhinz/vim-signify'
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
@@ -21,6 +22,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'rust-lang/rust.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'scrooloose/nerdtree'
+  Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-surround'
