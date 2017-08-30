@@ -28,6 +28,7 @@ set number       " Show line numbers.
 set ruler        " Show position in file and line.
 set scrolloff=10 " Show atleast 10 lines above & below cursor if possible.
 set wildmenu     " Visual autocomplete for commands.
+set nojoinspaces " Don't insert two spaces after punctuation when joining.
 
 set nobackup        " No automatic backups.
 set fileformat=unix " Force \n line endings.
