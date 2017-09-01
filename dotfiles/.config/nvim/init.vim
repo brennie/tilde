@@ -112,5 +112,7 @@ nnoremap <silent> <leader>x :BW<cr>
 
 " Map gd to go to defintion.
 nnoremap gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap gh :call LanguageClient_textDocument_hover()<CR>
+nnoremap <C-o> :call LanguageClient_textDocument_documentSymbol()<CR>
 nnoremap <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <C-f> :call LanguageClient_textDocument_formatting()<CR>
