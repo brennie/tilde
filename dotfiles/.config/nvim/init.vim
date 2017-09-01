@@ -1,6 +1,5 @@
 let s:darwin = has('mac')
 
-
 if !s:darwin
   source /usr/share/vim/vimfiles/plugin/fzf.vim
 end
@@ -49,6 +48,9 @@ let g:LanguageClient_autoStart = 1
 let g:LanguageClient_trace = 'verbose'
 
 let g:SimpylFold_docstring_preview = 1
+
+" Automatically call nohlsearch after a non-search related motion.
+let g:incsearch#auto_nohlsearch = 1
 
 augroup lint
   autocmd!
@@ -116,3 +118,7 @@ nnoremap gh :call LanguageClient_textDocument_hover()<CR>
 nnoremap <C-o> :call LanguageClient_textDocument_documentSymbol()<CR>
 nnoremap <F2> :call LanguageClient_textDocument_rename()<CR>
 nnoremap <C-f> :call LanguageClient_textDocument_formatting()<CR>
+
+" Use incsearch.vim over builtin search.
+nmap / <Plug>(incsearch-forward)
+nmap ? <Plug>(incsearch-backward)
