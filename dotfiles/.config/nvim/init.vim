@@ -39,6 +39,7 @@ set mouse +=a " Enable mouse support.
 
 let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
 
+let g:python_host_prog = expand('~/.virtualenvs/neovim/bin/python')
 let g:python3_host_prog = expand('~/.virtualenvs/neovim3/bin/python')
 let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_serverCommands= {
