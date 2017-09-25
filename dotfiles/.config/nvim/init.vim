@@ -21,13 +21,14 @@ set laststatus=2  " Always show airline.
 " Allow backspacing over autoindents, end of lines, and start of input.
 set backspace=indent,eol,start
 
-set modeline     " Enable modelines.
-set modelines=5  " Search 5 lines for a modeline.
-set number       " Show line numbers.
-set ruler        " Show position in file and line.
-set scrolloff=10 " Show atleast 10 lines above & below cursor if possible.
-set wildmenu     " Visual autocomplete for commands.
-set nojoinspaces " Don't insert two spaces after punctuation when joining.
+set modeline       " Enable modelines.
+set modelines=5    " Search 5 lines for a modeline.
+set number         " Show line numbers.
+set relativenumber " Show relative line numbers
+set ruler          " Show position in file and line.
+set scrolloff=10   " Show atleast 10 lines above & below cursor if possible.
+set wildmenu       " Visual autocomplete for commands.
+set nojoinspaces   " Don't insert two spaces after punctuation when joining.
 
 set nobackup        " No automatic backups.
 set fileformat=unix " Force \n line endings.
