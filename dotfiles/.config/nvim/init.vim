@@ -94,7 +94,7 @@ nnoremap <silent> <C-j> :<C-u>silent call append(line('.'), repeat([''], v:count
 nnoremap <silent> <C-k> :<C-u>silent call append(line('.')-1, repeat([''], v:count1))<CR>
 
 " Map <C-p> to fzf.vim file search.
-nnoremap <C-p> :Files<CR>
+nnoremap <silent> <C-p> :Files<CR>
 
 " Use <A-{hjkl}> to move around windows.
 nnoremap <A-h> <C-w>h
@@ -118,11 +118,11 @@ nnoremap <silent> <leader>x :BW<cr>
 nnoremap <silent> <leader><CR> :Buffers<CR>
 
 " Map gd to go to defintion.
-nnoremap gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap gh :call LanguageClient_textDocument_hover()<CR>
-nnoremap <C-o> :call LanguageClient_textDocument_documentSymbol()<CR>
-nnoremap <F2> :call LanguageClient_textDocument_rename()<CR>
-nnoremap <C-f> :call LanguageClient_textDocument_formatting()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> gh :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> <C-o> :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+nnoremap <silent> <C-f> :call LanguageClient_textDocument_formatting()<CR>
 
 " Use incsearch.vim over builtin search.
 nmap / <Plug>(incsearch-forward)
