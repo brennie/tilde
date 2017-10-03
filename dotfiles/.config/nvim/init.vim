@@ -114,6 +114,9 @@ nnoremap <silent> <C-k>b :NERDTreeToggle<CR>
 " Use <leader>x to close buffers
 nnoremap <silent> <leader>x :BW<cr>
 
+" Use <leader><cr> to list buffers with fzf
+nnoremap <silent> <leader><CR> :Buffers<CR>
+
 " Map gd to go to defintion.
 nnoremap gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap gh :call LanguageClient_textDocument_hover()<CR>
