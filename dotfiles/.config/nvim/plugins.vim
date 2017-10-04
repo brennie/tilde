@@ -25,6 +25,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'scrooloose/nerdtree'
   Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
   Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-surround'
   Plug 'vim-airline/vim-airline'
