@@ -22,6 +22,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'qpkorr/vim-bufkill'
   Plug 'rust-lang/rust.vim'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'simnalamburt/vim-mundo'
   Plug 'scrooloose/nerdtree'
   Plug 'tmhedberg/SimpylFold', { 'for': 'python' }
   Plug 'tpope/vim-commentary'

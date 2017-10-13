@@ -38,6 +38,9 @@ set foldlevelstart=99 " Do not automatically close folds.
 
 set mouse +=a " Enable mouse support.
 
+set undofile
+set undodir=~/.vim/undo
+
 let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
 
 let g:python_host_prog = expand('~/.virtualenvs/neovim/bin/python')
@@ -111,6 +114,9 @@ tnoremap <A-l> <C-\><C-n><C-w>l
 
 " Use <C-k>b to open/close NERDtree
 nnoremap <silent> <C-k>b :NERDTreeToggle<CR>
+
+" Use <C-k>u to open/close mundo's undo tree
+nnoremap <silent> <C-k>u :MundoToggle<CR>
 
 " Use <leader>x to close buffers
 nnoremap <silent> <leader>x :BW<cr>
