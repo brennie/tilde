@@ -44,7 +44,8 @@ let g:python_host_prog = expand('~/.virtualenvs/neovim/bin/python')
 let g:python3_host_prog = expand('~/.virtualenvs/neovim3/bin/python')
 let g:deoplete#enable_at_startup = 1
 let g:LanguageClient_serverCommands= {
- \ 'python': [expand('~/.virtualenvs/neovim3/bin/pyls'),]
+ \ 'python': [expand('~/.virtualenvs/neovim3/bin/pyls'),],
+ \ 'rust': ['rustup', 'run', 'nightly', 'rls',]
  \ }
 let g:LanguageClient_autoStart = 1
 let g:LanguageClient_trace = 'verbose'
