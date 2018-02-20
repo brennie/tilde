@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'alexlafroscia/postcss-syntax.vim', { 'for': 'scss' }
   Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
   Plug 'AndrewRadev/splitjoin.vim'
+  Plug 'chr4/nginx.vim', { 'for': 'nginx' }
   Plug 'dag/vim-fish', { 'for': 'fish' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'groenewege/vim-less', { 'for': 'less' }
