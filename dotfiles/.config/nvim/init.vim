@@ -70,7 +70,7 @@ augroup END
 
 augroup JavaScript
   autocmd!
-  autocmd! FileType javascript call matchadd('ColorColumn', '\%>80v.\+', 100)
+  autocmd FileType javascript call matchadd('ColorColumn', '\%>80v.\+', 100)
 augroup END
 
 augroup Git
