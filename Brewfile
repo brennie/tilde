@@ -1,0 +1,40 @@
+tap brennie/libgit2-versions
+tap caskroom/cask
+tap caskroom/fonts
+tap caskroom/versions
+
+install apr
+install apr-util
+install awscli
+install coreutils
+install cvs
+install eit
+install fzf
+install gawk
+install gnu-tar
+install gnupg
+install go
+install httpie
+install lastpass-cli --HEAD
+install kubernetes-cli
+install mysql
+install neovim
+install node
+install pinentry-mac
+install proctools
+install psutils
+install python
+install python3
+install subversion
+install terraform
+install tig
+install wget
+
+cask docker-edge
+cask font-fira-code
+cask font-hack
+cask font-source-code-pro
+cask minikube
+cask perforce
+cask pycharm
+cask transmission
