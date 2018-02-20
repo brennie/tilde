@@ -87,7 +87,7 @@ augroup END
 
 augroup PostCSS
   autocmd!
-  autocmd BufNewFile,BufRead *.pcss set ft=scss
+  autocmd BufNewFile,BufRead *.pcss setlocal ft=scss
 augroup END
 
 if s:darwin
