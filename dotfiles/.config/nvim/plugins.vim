@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'dag/vim-fish', { 'for': 'fish' }
   Plug 'elzr/vim-json', { 'for': 'json' }
   Plug 'groenewege/vim-less', { 'for': 'less' }
+  Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
   Plug 'haya14busa/incsearch.vim'
   Plug 'honza/dockerfile.vim'
   Plug 'hynek/vim-python-pep8-indent', { 'for': 'python' }

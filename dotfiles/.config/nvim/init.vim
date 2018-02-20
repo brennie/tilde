@@ -73,6 +73,13 @@ augroup JavaScript
   autocmd FileType javascript call matchadd('ColorColumn', '\%>80v.\+', 100)
 augroup END
 
+augroup Terraform
+  autocmd!
+  autocmd FileType terraform setlocal commentstring=#%s
+augroup END
+
+let g:terraform_align = 1
+
 augroup Git
   autocmd!
   autocmd FileType gitcommit call matchadd('ColorColumn', '\%>72v.\+', 100)
