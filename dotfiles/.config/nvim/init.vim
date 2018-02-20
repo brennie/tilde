@@ -41,7 +41,7 @@ set mouse +=a " Enable mouse support.
 set undofile
 set undodir=~/.vim/undo
 
-let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '\.DS_Store$' ]
+let NERDTreeIgnore = [ '\.py[co]$', '\.o$', '^\.DS_Store$', '^__pycache__$', '\.egg-info$', '^node_modules$', ]
 
 let g:python_host_prog = expand('~/.virtualenvs/neovim/bin/python')
 let g:python3_host_prog = expand('~/.virtualenvs/neovim3/bin/python')
