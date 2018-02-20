@@ -16,3 +16,6 @@ thumbs.db
 # Sublime project files
 *.sublime-project
 *.sublime-workspace
+
+.mypy_cache/
+.ropeproject/
