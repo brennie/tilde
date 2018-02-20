@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/plugins/')
   Plug 'junegunn/fzf.vim'
   Plug 'Konfekt/FastFold'
   Plug 'mhinz/vim-signify'
+  Plug 'mxw/vim-jsx', { 'for': 'javascript' }
   Plug 'ntpeters/vim-better-whitespace'
   Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
   Plug 'qpkorr/vim-bufkill'
