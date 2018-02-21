@@ -32,5 +32,5 @@
     ~/.reviewboardrc: .reviewboardrc
     ~/.tigrc: .tigrc
     ~/.tmux.conf: .tmux.conf
-    ~/bin/git-reset-here: bin/git-reset-here
-    ~/bin/git-fcheckout: bin/git-fcheckout
+    ~/.local/bin/git-reset-here: bin/git-reset-here
+    ~/.local/bin/git-fcheckout: bin/git-fcheckout
