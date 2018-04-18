@@ -63,27 +63,53 @@ augroup lint
   autocmd BufWritePre * StripWhitespace
 augroup END
 
-augroup Python
+" Using `autocmd FileType someft` ... won't execute when creating a split, so
+" we need a workaround.
+"
+" See <http://vim.wikia.com/wiki/Detect_window_creation_with_WinEnter> for more
+" details.
+augroup FileTypes
   autocmd!
-  autocmd FileType python call matchadd('ColorColumn', '\%>79v.\+', 100)
+
+  " WinEnter doesn't trigger for the first window. So we specifically set the
+  " w:created when we enter vim.
+  " Then we register an autocmd to set up w:created in each new window.
+  autocmd VimEnter * let w:created=1
+  autocmd VimEnter * autocmd WinEnter * let w:created=1
+
+  " Set up per-filetype settiings when new windows are created.
+  autocmd WinEnter * if !exists('w:created') | call s:handleFt(&ft) | endif
+
+  " And when we change filetypes.
+  autocmd FileType * call s:handleFt(&ft)
 augroup END
 
-augroup JavaScript
-  autocmd!
-  autocmd FileType javascript call matchadd('ColorColumn', '\%>80v.\+', 100)
-augroup END
 
-augroup Terraform
-  autocmd!
-  autocmd FileType terraform setlocal commentstring=#%s
-augroup END
+" Filetype-specific settings.
+function s:handleFt(filetype)
+  if exists('w:matchadd_id')
+     call matchdelete(w:matchadd_id)
+  endif
+
+  if a:filetype == 'python'
+    let l:col = 79
+  elseif a:filetype == 'javascript'
+    let l:col = 80
+  elseif a:filetype == 'git'
+    let l:col = 72
+  elseif a:filetype == 'terraform'
+    setlocal commentstring=#%s
+  elseif a:filetype == 'go'
+    setlocal ts=4 sw=4 et
+  endif
+
+  if exists('l:col')
+    let l:colfmt = printf('\%%>%dv.\+', l:col)
+    let w:matchadd_id = matchadd('ColorColumn', l:colfmt, 100)
+  endif
+endfunction
 
 let g:terraform_align = 1
-
-augroup Git
-  autocmd!
-  autocmd FileType gitcommit call matchadd('ColorColumn', '\%>72v.\+', 100)
-augroup END
 
 augroup PostCSS
   autocmd!
