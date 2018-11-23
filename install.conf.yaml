@@ -34,3 +34,4 @@
     ~/.tmux.conf: .tmux.conf
     ~/.local/bin/git-reset-here: bin/git-reset-here
     ~/.local/bin/git-fcheckout: bin/git-fcheckout
+    ~/.local/bin/hg-cherry-pick: bin/hg-cherry-pick

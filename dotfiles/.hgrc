@@ -1,6 +1,9 @@
 [ui]
 username = Barret Rennie <barret@brennie.ca>
 
+[alias]
+cherry-pick = !hg-cherry-pick $@
+
 [extensions]
 pager =
 progress =

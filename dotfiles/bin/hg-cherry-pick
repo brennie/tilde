@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+
+if (( $# == 1 )); then
+	REV="${1}"
+	echo "Importing patch from revision ${REV}..."
+	hg export -r "${REV}" | hg import -
+else
+	echo "usage: hg-cherry-pick <REVISION>" >&2
+	exit 1
+fi
