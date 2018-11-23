@@ -1,18 +1,24 @@
 [ui]
 username = Barret Rennie <barret@brennie.ca>
+tweakdefaults = true
+interface = curses
 
 [alias]
 cherry-pick = !hg-cherry-pick $@
 
 [extensions]
-pager =
 progress =
-color =
 histedit =
 rebase =
 strip =
+evolve =
+blackbox =
+purge =
 
 [diff]
 git = 1
 showfunc = 1
 unified = 8
+
+[experimental]
+graphshorten = true
