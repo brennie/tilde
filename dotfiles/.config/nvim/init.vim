@@ -1,7 +1,17 @@
 let s:darwin = has('mac')
 
+function! s:exists(path)
+  return !empty(glob(a:path))
+endfunction
+
 if !s:darwin
-  source /usr/share/vim/vimfiles/plugin/fzf.vim
+  if s:exists('/usr/share/vim/vimfiles/plugin/fzf.vim')
+    " Arch Linux installs fzf.vim here.
+    source share/vim/vimfiles/plugin/fzf.vim
+  elseif s:exists('/usr/share/doc/fzf/examples/fzf.vim')
+    " Debian package installs fzf.vim here.
+    source /usr/share/doc/fzf/examples/fzf.vim
+  end
 end
 
 source ~/.config/nvim/plugins.vim
