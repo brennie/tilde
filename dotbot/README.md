@@ -74,6 +74,17 @@ submodule; be sure to commit your changes before running `./install`, otherwise
 the old version of Dotbot will be checked out by the install script. If using a
 subrepo, run `git fetch && git checkout origin/master` in the Dotbot directory.
 
+If you prefer, you can install Dotbot from [PyPI] and call it as a command-line
+program:
+
+```bash
+pip install dotbot
+touch install.conf.yaml
+```
+
+In this case, rather than running `./install`, you can invoke Dotbot with
+`dotbot -c <path to configuration file>`.
+
 ### Full Example
 
 Here's an example of a complete configuration.
@@ -165,17 +176,23 @@ files if necessary. Environment variables in paths are automatically expanded.
 
 Link commands are specified as a dictionary mapping targets to source
 locations. Source locations are specified relative to the base directory (that
-is specified when running the installer). Directory names should *not* contain
-a trailing "/" character.
+is specified when running the installer). If linking directories, *do not* include a trailing slash.
 
 Link commands support an (optional) extended configuration. In this type of
 configuration, instead of specifying source locations directly, targets are
-mapped to extended configuration dictionaries. These dictionaries map `path` to
-the source path, specify `create` as `true` if the parent directory should be
-created if necessary, specify `relink` as `true` if incorrect symbolic links
-should be automatically overwritten, specify `force` as `true` if the file or
-directory should be forcibly linked, and specify `relative` as `true` if the
-symbolic link should have a relative path.
+mapped to extended configuration dictionaries.
+
+Available extended configuration parameters:
+
+| Link Option | Explanation |
+| -- | -- |
+| `path` | The target for the symlink, the same as in the shortcut syntax (default:null, automatic (see below)) |
+| `create` | When true, create parent directories to the link as needed. (default:false) |
+| `relink` | Removes the old target if it's a symlink (default:false) |
+| `force` | Force removes the old target, file or folder, and forces a new link (default:false) |
+| `relative` | Use a relative path when creating the symlink (default:false, absolute links) |
+| `glob` | Treat a `*` character as a wildcard, and perform link operations on all of those matches (default:false) |
+| `if` | Execute this in your `$SHELL` and only link if it is successful. |
 
 #### Example
 
@@ -207,6 +224,10 @@ the following three config files equivalent:
     ~/.zshrc:
       force: true
       path: zshrc
+    ~/.config/:
+      glob: true
+      path: config/*
+      relink: true
 ```
 
 ```yaml
@@ -217,6 +238,10 @@ the following three config files equivalent:
       relink: true
     ~/.zshrc:
       force: true
+    ~/.config/:
+      glob: true
+      path: config/*
+      relink: true
 ```
 
 ```json
@@ -230,6 +255,11 @@ the following three config files equivalent:
       },
       "~/.zshrc": {
         "force": true
+      },
+      "~/.config/": {
+        "glob": true,
+        "path": "config/*",
+        "relink": true
       }
     }
   }
@@ -251,8 +281,9 @@ shell command and the second is an optional human-readable description.
 
 Shell commands support an extended syntax as well, which provides more
 fine-grained control. A command can be specified as a dictionary that contains
-the command to be run, a description, and whether `stdin`, `stdout`, and
-`stderr` are enabled. In this syntax, all keys are optional except for the
+the command to be run, a description, whether to suppress outputting the
+command in the display via `quiet`,  and whether `stdin`, `stdout`,
+and `stderr` are enabled. In this syntax, all keys are optional except for the
 command itself.
 
 #### Example
@@ -265,6 +296,8 @@ command itself.
     command: read var && echo Your variable is $var
     stdin: true
     stdout: true
+    description: Reading and printing variable
+    quiet: true
   -
     command: read fail
     stderr: true
@@ -347,12 +380,22 @@ Contributing
 Do you have a feature request, bug report, or patch? Great! See
 [CONTRIBUTING.md][contributing] for information on what you can do about that.
 
+Packaging
+---------
+
+1. Update version information.
+
+2. Build the package using ``python setup.py sdist bdist_wheel``.
+
+3. Sign and upload the package using ``twine upload -s dist/*``.
+
 License
 -------
 
-Copyright (c) 2014-2017 Anish Athalye. Released under the MIT License. See
+Copyright (c) 2014-2018 Anish Athalye. Released under the MIT License. See
 [LICENSE.md][license] for details.
 
+[PyPI]: https://pypi.org/project/dotbot/
 [init-dotfiles]: https://github.com/Vaelatern/init-dotfiles
 [dotfiles-template]: https://github.com/anishathalye/dotfiles_template
 [inspiration]: https://github.com/anishathalye/dotbot/wiki/Users

@@ -1,6 +1,6 @@
 DEBUG=${DEBUG:-false}
 USE_VAGRANT=${USE_VAGRANT:-true}
-DOTBOT_EXEC=${DOTBOT_EXEC:-"/dotbot/bin/dotbot"}
+DOTBOT_EXEC=${DOTBOT_EXEC:-"python /dotbot/bin/dotbot"}
 DOTFILES="/home/$(whoami)/dotfiles"
 INSTALL_CONF='install.conf.yaml'
 INSTALL_CONF_JSON='install.conf.json'
@@ -47,17 +47,15 @@ initialize() {
 
 run_dotbot() {
     (
-        cd "${DOTFILES}"
-        cat > "${INSTALL_CONF}"
-        ${DOTBOT_EXEC} -d . -c "${INSTALL_CONF}" "${@}"
+        cat > "${DOTFILES}/${INSTALL_CONF}"
+        ${DOTBOT_EXEC} -c "${DOTFILES}/${INSTALL_CONF}" "${@}"
     )
 }
 
 run_dotbot_json() {
     (
-        cd "${DOTFILES}"
-        cat > "${INSTALL_CONF_JSON}"
-        ${DOTBOT_EXEC} -d . -c "${INSTALL_CONF_JSON}" "${@}"
+        cat > "${DOTFILES}/${INSTALL_CONF_JSON}"
+        ${DOTBOT_EXEC} -c "${DOTFILES}/${INSTALL_CONF_JSON}" "${@}"
     )
 }
 
