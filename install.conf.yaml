@@ -1,29 +1,24 @@
 - defaults:
     link:
-      create: true
-      relink: true
+        create: true
+        relink: true
 
 - clean: ['~']
 
 - link:
-    ~/.config/fish/completions/git.fish: .config/fish/completions/git.fish
-    ~/.config/fish/completions/pew.fish: .config/fish/completions/pew.fish
-    ~/.config/fish/completions/rbt.fish: .config/fish/completions/rbt.fish
-    ~/.config/fish/completions/tig.fish: .config/fish/completions/tig.fish
-    ~/.config/fish/config.fish: .config/fish/config.fish
-    ~/.config/fish/conf.d/00-colours.fish: .config/fish/conf.d/00-colours.fish
-    ~/.config/fish/conf.d/00-path-macos.fish: .config/fish/conf.d/00-path-macos.fish
-    ~/.config/fish/conf.d/00-path.fish: .config/fish/conf.d/00-path.fish
-    ~/.config/fish/conf.d/00-perl-local-lib.fish: .config/fish/conf.d/00-perl-local-lib.fish
-    ~/.config/fish/conf.d/10-dircolors.fish: .config/fish/conf.d/10-dircolors.fish
-    ~/.config/fish/conf.d/10-ssh-agent-linux.fish: .config/fish/conf.d/10-ssh-agent-linux.fish
-    ~/.config/fish/conf.d/99-once.fish: .config/fish/conf.d/99-once.fish
-    ~/.config/fish/functions/fish_greeting.fish: .config/fish/functions/fish_greeting.fish
-    ~/.config/fish/functions/fish_prompt.fish: .config/fish/functions/fish_prompt.fish
-    ~/.config/fish/functions/fish_title.fish: .config/fish/functions/fish_title.fish
-    ~/.config/fish/functions/fish_user_key_bindings.fish: .config/fish/functions/fish_user_key_bindings.fish
-    ~/.config/nvim/init.vim: .config/nvim/init.vim
-    ~/.config/nvim/plugins.vim: .config/nvim/plugins.vim
+    ~/.config/fish/completions:
+        path: .config/fish/completions/*
+        glob: true
+    ~/.config/fish/config.fish: ''
+    ~/.config/fish/conf.d:
+        path: .config/fish/conf.d/*
+        glob: true
+    ~/.config/fish/functions:
+        path: .config/fish/functions/*
+        glob: true
+    ~/.config/nvim:
+        path: .config/nvim/*
+        glob: true
     ~/.dircolors: .dircolors
     ~/.gitconfig: .gitconfig
     ~/.gitignore_global: .gitignore_global
@@ -32,6 +27,6 @@
     ~/.reviewboardrc: .reviewboardrc
     ~/.tigrc: .tigrc
     ~/.tmux.conf: .tmux.conf
-    ~/.local/bin/git-reset-here: bin/git-reset-here
-    ~/.local/bin/git-fcheckout: bin/git-fcheckout
-    ~/.local/bin/hg-cherry-pick: bin/hg-cherry-pick
+    ~/.local/bin:
+        path: bin/*
+        glob: true
